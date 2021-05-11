@@ -32,7 +32,7 @@ public class ClienteDao implements ClienteInterface{
 	@Override
 	public int editar(Cliente c) {
 		String sql="update cliente set nomcli=?,apecli=?,numcli=? where idcli=?";
-		return template.update(sql,c.getNomcli(),c.getApecli(),c.getNumcli());
+		return template.update(sql,c.getNomcli(),c.getApecli(),c.getNumcli(),c.getIdcli());
 	}
 
 	@Override
