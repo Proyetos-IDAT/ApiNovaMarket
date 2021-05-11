@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.novo.interfaces.UserInterface;
 import com.novo.modelo.User;
 
+
 @RestController
 public class UserRestController {
 
