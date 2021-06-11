@@ -31,7 +31,7 @@ public class ClienteRestController {
 		if(id==0) {
 			return "No se registro";
 		}
-		return "registro eliminado";
+		return "registro agregado";
 		
 	}
 	
