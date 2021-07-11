@@ -39,11 +39,9 @@ public class ProductoRestController {
 	ProductoService service;
 
 	@GetMapping("/all")
-	public ResponseEntity<Map<String, Object>> listarProductos() {
-		Map<String, Object> response = new HashMap<>();
+	public ResponseEntity<?> listarProductos() {
 		List<Producto> listaproductos = service.listarProductos();
-		response.put("productos", listaproductos);
-		return new ResponseEntity<>(response, HttpStatus.OK);
+		return new ResponseEntity<>(listaproductos, HttpStatus.OK);
 	}
 
 	@GetMapping("/{id}")

@@ -25,8 +25,6 @@ public class CategoriaRestController {
 		return service.listar();
 	}
 	
-	
-	
 	@PostMapping("/api/eliminarcat/{id}")
 	public String delete(@PathVariable int id,Model model) {
 		int r=service.eliminar(id);
