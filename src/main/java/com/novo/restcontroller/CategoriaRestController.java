@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.novo.modelo.Categoria;
-import com.novo.modelo.MetodoPago;
 import com.novo.service.CategoriaService;
 
 @RestController
@@ -25,8 +24,6 @@ public class CategoriaRestController {
 	public List<Map<String, Object>>listar(Model model){
 		return service.listar();
 	}
-	
-	
 	
 	@PostMapping("/api/eliminarcat/{id}")
 	public String delete(@PathVariable int id,Model model) {

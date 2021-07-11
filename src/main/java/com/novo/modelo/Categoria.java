@@ -7,15 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 @Entity
 @Table(name = "categorias")
 public class Categoria {
-	
-	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +20,6 @@ public class Categoria {
 
 	public Categoria() {
 		super();
-		
 	}
 	
 	public Categoria(int idcat, String nomcat) {
@@ -49,8 +42,5 @@ public class Categoria {
 
 	public void setNomcat(String nomcat) {
 		this.nomcat = nomcat;
-	}
-	
-	
-	
+	}	
 }
