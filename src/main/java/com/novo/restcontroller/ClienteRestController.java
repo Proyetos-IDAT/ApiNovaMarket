@@ -24,7 +24,7 @@ public class ClienteRestController {
 	public List<Map<String, Object>>listar(Model model){
 		return service.listar();
 	}
-	
+	//Para agregar y funcione correctamente en el postman llamarlo sin el id en el body de Json
 	@PostMapping("/api/agregar")
 	public String save(@RequestBody Cliente c,Model model) {
 		int id=service.agregar(c);
@@ -34,7 +34,7 @@ public class ClienteRestController {
 		return "registro agregado";
 		
 	}
-	
+	//Para modificar no coloquen el id en el body
 	@PostMapping("/api/actualizar/{id}")
 	public String save(@RequestBody Cliente c,@PathVariable int id,Model model) {
 		c.setIdcli(id);

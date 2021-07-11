@@ -17,10 +17,11 @@ public class User {
 	private @NotBlank String password;
 	
 	public User() {
-		
+		super();
 	}
 
 	public User(@NotBlank String userName, @NotBlank String password) {
+		super();
 		this.userName = userName;
 		this.password = password;
 	}
@@ -59,7 +60,6 @@ public class User {
 		if (!(obj instanceof User))
 			return false;
 		User other = (User) obj;
-		
 		if (password == null) {
 			if (other.password != null)
 				return false;

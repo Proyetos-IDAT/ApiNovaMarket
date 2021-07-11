@@ -1,6 +1,6 @@
 package com.novo.restcontroller;
 
-import java.util.List;
+import java.util.List; 
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.novo.modelo.Categoria;
-import com.novo.modelo.MetodoPago;
 import com.novo.service.CategoriaService;
 
 @RestController

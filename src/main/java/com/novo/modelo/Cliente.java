@@ -27,4 +27,7 @@ public class Cliente {
 	private String apecli;
 	@Column
 	private String numcli;
+	
+	
+	
 }

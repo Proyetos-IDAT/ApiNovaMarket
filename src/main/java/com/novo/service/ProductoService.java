@@ -1,6 +1,7 @@
 package com.novo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,14 @@ public class ProductoService implements ProductoInterface{
 	@Autowired
 	ProductoDao dao;
 
+	public Producto readProducto(String nomprod) {
+		return dao.findBynomprod(nomprod);
+	}
+
+	public Optional<Producto>readProducto(int ProductoId){
+		return dao.findById(ProductoId);
+	}
+	
 	@Override
 	public List<Producto> listarProductos() {
 		return (List<Producto>)dao.findAll();
@@ -24,6 +33,10 @@ public class ProductoService implements ProductoInterface{
 	public Producto agregarProducto(Producto prod) {
 		return dao.save(prod);
 	}
+	
+	/*public Optional<Category> readCategory(Long categoryId) {
+		return categoryrepository.findById(categoryId);
+	}*/
 
 	@Override
 	public void eliminarProducto(int id) {

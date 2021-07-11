@@ -31,4 +31,5 @@ public class Proveedor {
 	private String direccion;
 	@Column
 	private int telefono;
+	
 }
