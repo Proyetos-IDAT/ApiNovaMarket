@@ -1,7 +1,7 @@
 package com.novo.modelo;
 
 
-import javax.persistence.Entity;
+import javax.persistence.Entity; 
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -45,8 +45,14 @@ public class ComprobantePago {
 	@JoinColumn(name = "metodopago_id",nullable = false)
 	MetodoPago metodoPago;
 	
+	private double precio;
+
+	private int cantidad;
+	
 	public ComprobantePago(ComprobantePagoDto comprobantePagoDto,Cliente cliente,Producto producto,MetodoPago metodoPago) {
 		this.fecha=comprobantePagoDto.getFecha();
+		this.precio=comprobantePagoDto.getPrecio();
+		this.cantidad=comprobantePagoDto.getCantidad();
 		this.cliente=cliente;
 		this.producto=producto;
 		this.metodoPago=metodoPago;
