@@ -16,9 +16,7 @@ public class ProductoService implements ProductoInterface{
 	@Autowired
 	ProductoDao dao;
 
-	public Producto readProducto(String nomprod) {
-		return dao.findBynomprod(nomprod);
-	}
+	
 
 	public Optional<Producto>readProducto(int ProductoId){
 		return dao.findById(ProductoId);
@@ -47,5 +45,11 @@ public class ProductoService implements ProductoInterface{
 	public Producto buscarProducto(Integer id) {
 		return dao.findById(id).orElse(null);
 	}
+
+	@Override
+	public List<Producto> findBynomprod(String nomprod) {
+		return dao.findBynomprod(nomprod);
+	}
+
 
 }

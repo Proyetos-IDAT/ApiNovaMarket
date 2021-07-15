@@ -1,6 +1,6 @@
 package com.novo.restcontroller;
 
-import java.io.File;
+import java.io.File; 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -228,4 +229,12 @@ public class ProductoRestController {
 		response.put("producto eliminado", p);
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
 	}
+	
+	//Agregando buscador de producto
+	@GetMapping("/buscar/{nomprod}")
+	@ResponseStatus(HttpStatus.OK)
+	public List<Producto>buscar(@PathVariable String nomprod){
+		return service.findBynomprod(nomprod);
+	}
+	
 }

@@ -9,4 +9,5 @@ public interface ProductoInterface{
 	public Producto agregarProducto(Producto prod);
 	public void eliminarProducto(int id);
 	public Producto buscarProducto(Integer id);
+	public List<Producto> findBynomprod(String nomprod);
 }
